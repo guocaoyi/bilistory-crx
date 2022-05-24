@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Bilistory",
+  "description": "Cache bilibili recommended videos to prevent missing after refresh",
+  "background": { "service_worker": "background.bundle.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo-34.png"
+  },
+  "icons": {
+    "128": "logo-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.bilibili.com/",
+        "https://bilibili.com/",
+        "https://www.bilibili.com/"
+      ],
+      "js": ["contentScript.bundle.js"],
+      "css": ["content.styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.styles.css", "logo-128.png", "logo-34.png"],
+      "matches": []
+    }
+  ]
+}
