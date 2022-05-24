@@ -13,8 +13,10 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": false,
-    "jsx": "react"
+    "jsx": "react",
+    "rootDir": "./src",
+    "baseUrl": "./src"
   },
-  "include": ["src", "global.d.ts", "typings"],
+  "include": ["src", "typings", "global.d.ts", "bilitype.d.ts"],
   "exclude": ["build", "node_modules"]
 }

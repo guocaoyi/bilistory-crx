@@ -117,10 +117,8 @@ var options = {
           to: path.join(__dirname, 'build'),
           force: true,
           transform: function (content, path) {
-            // generates the manifest file using the package.json informations
             return Buffer.from(
               JSON.stringify({
-                description: process.env.npm_package_description,
                 version: process.env.npm_package_version,
                 ...JSON.parse(content.toString()),
               }),

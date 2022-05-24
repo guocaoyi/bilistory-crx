@@ -1,15 +1,17 @@
 {
-  "manifest_version": 3,
   "name": "Bilistory",
   "description": "Cache bilibili recommended videos to prevent missing after refresh",
-  "background": { "service_worker": "background.bundle.js" },
+  "manifest_version": 3,
+  "icons": {
+    "32": "logo-34.png",
+    "128": "logo-128.png"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": "logo-34.png"
   },
-  "icons": {
-    "128": "logo-128.png"
-  },
+  "available_locales": ["en", "zh-CN"],
+  "background": { "service_worker": "background.bundle.js" },
   "content_scripts": [
     {
       "matches": [
