@@ -37,8 +37,12 @@ export interface RcmdReason {
 
   /**
    * 推荐类型
+   * @type {0} nomal
+   * @type {1} *
+   * @type {2} *
+   * @type {3} 高赞
    */
-  reason_type: 0 | 1 | 2 | 3
+  reason_type: number
 }
 
 /**
@@ -54,14 +58,11 @@ export interface RcmdVideo {
   /** 视频 C 编号 */
   cid: number
 
-  /** tracing 编号 */
-  track_id: string
-
   /** 视频格式 */
-  goto: 'av' | 'mp4'
+  goto: 'av' | 'mp4' | string
 
   /** 视频地址 uri */
-  uri: `https://www.bilibili.com/video/${string}`
+  uri: string
 
   /** 预览图 */
   pic: string
@@ -89,7 +90,7 @@ export interface RcmdVideo {
    * @type {0} 未关注
    * @type {1} 已关注
    */
-  is_followed: 0 | 1
+  is_followed: number
 
   /**
    * 推荐原因
@@ -98,8 +99,13 @@ export interface RcmdVideo {
 
   /**
    * 是否展示信息
+   * @type {0} 不展示
+   * @type {1} 展示
    */
-  show_info: 0 | 1
+  show_info: number
+
+  /** tracing 编号 */
+  track_id: string
 }
 
 /**

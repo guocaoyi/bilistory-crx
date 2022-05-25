@@ -3,7 +3,7 @@ import React from 'react'
 import type { FC } from 'react'
 
 /**
- * Skeleton
+ * Skeleton 骨架
  */
 export const Skeleton: FC<unknown> = () => (
   <div className="bili-video-card__skeleton hide">
